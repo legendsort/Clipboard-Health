@@ -9,3 +9,11 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+3.
+
+1) I assigned initial value to candidate as TRIVIAL_PARTITION_KEY.
+2) crypto.createHash("sha3-512").update(data).digest("hex") function will return 128byte string so we don't have to compare MAX_PARTITION_KEY_LENGTH and candidate.length.
+3) Add up similar conditions into one.
+
+Code refactored in dpk.js
